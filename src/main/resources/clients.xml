@@ -1,0 +1,24 @@
+<clients>
+    <client name="ABC">
+        <fields>
+            <field key="f1" value="test" isRequired="true"/>
+            <field key="f2" value="01/01/2018" isRequired="false"/>
+        </fields>
+        <userlogins>
+            <userlogin role="Tech" username="abcd" password="aaa"/>
+            <userlogin role="Provider" username="xyz" password="bbb"/>
+            <userlogin role="Appeal" username="ab123" password="ccc"/>
+        </userlogins>
+    </client>
+    <client name="GHI">
+        <fields>
+            <field key="f3" value="test2" isRequired="true"/>
+            <field key="f4" value="01/01/2018" isRequired="false"/>
+        </fields>
+        <userlogins>
+            <userlogin role="Tech" username="pabcd" password="paaa"/>
+            <userlogin role="Provider" username="pxyz" password="pbbb"/>
+            <userlogin role="Appeal" username="pab123" password="pccc"/>
+        </userlogins>
+    </client>
+</clients>
