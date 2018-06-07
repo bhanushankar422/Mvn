@@ -3,7 +3,6 @@ package com.test.xml;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
-@JacksonXmlRootElement(localName="userlogin")
 public class Userlogin {
     @JacksonXmlProperty(isAttribute = true)
     private String role;

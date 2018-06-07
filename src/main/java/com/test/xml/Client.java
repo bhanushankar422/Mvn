@@ -1,19 +1,22 @@
 package com.test.xml;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 import java.util.Arrays;
 
-@JacksonXmlRootElement(localName="client")
+
 public class Client {
     @JacksonXmlProperty(isAttribute = true)
     private String name;
 
-    @JacksonXmlProperty(localName = "fields")
+    @JacksonXmlElementWrapper(localName = "fields")
+    @JacksonXmlProperty(localName = "field")
     private Field[] fields;
 
-    @JacksonXmlProperty(localName = "userlogins")
+    @JacksonXmlElementWrapper(localName = "userlogins")
+    @JacksonXmlProperty(localName = "userlogin")
     private Userlogin[] userlogins;
 
     @Override

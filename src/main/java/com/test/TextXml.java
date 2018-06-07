@@ -1,5 +1,6 @@
 package com.test;
 
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.test.xml.Client;
 import com.test.xml.Clients;
@@ -39,8 +40,9 @@ public class TextXml {
         field1.setValue("xyz1");
         Field[] fields = {field, field1};
         client.setFields(fields);
-        Client[] clients2 = {client};
+        Client[] clients2 = {client, client};
         clients1.setClients(clients2);
+        mapper.configure(SerializationFeature.WRAP_ROOT_VALUE, false);
         mapper.writeValue(new File("simple_bean.xml"), clients1);
     }
 }

@@ -6,10 +6,10 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 import java.util.Arrays;
-@JsonIgnoreProperties(ignoreUnknown = true)
-@JacksonXmlRootElement(localName="clients")
+@JacksonXmlRootElement(localName = "clients")
 public class Clients {
-    @JacksonXmlElementWrapper(localName = "client")
+    @JacksonXmlProperty(localName = "client")
+    @JacksonXmlElementWrapper(useWrapping = false)
     private Client[] clients;
 
     @Override

@@ -3,7 +3,6 @@ package com.test.xml;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
-@JacksonXmlRootElement(localName="field")
 public class Field {
     @JacksonXmlProperty(isAttribute = true)
     private String key;
